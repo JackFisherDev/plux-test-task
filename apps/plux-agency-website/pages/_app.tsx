@@ -1,13 +1,40 @@
 import { AppProps } from 'next/app';
-import Head from 'next/head';
+import localFont from 'next/font/local';
+
+import '../styles/global.css';
+
+const bariol = localFont({
+  src: [
+    {
+      path: '../public/fonts/Bariol/bariol_serif_regular-webfont.woff2',
+      weight: '400',
+    },
+  ],
+});
+const gtUltra = localFont({
+  src: [
+    {
+      path: '../public/fonts/GT-Ultra/GT-Ultra-Fine-Light.woff2',
+      weight: '250',
+    },
+    {
+      path: '../public/fonts/GT-Ultra/GT-Ultra-Fine-Bold.woff2',
+      weight: '700',
+    },
+  ],
+});
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <title>Welcome to plux-agency-website!</title>
-      </Head>
-      <main className="app">
+      <style jsx global>{`
+        :root {
+          --bariol-font: ${bariol.style.fontFamily};
+          --gt-ultra-fine: ${gtUltra.style.fontFamily};
+        }
+      `}</style>
+
+      <main>
         <Component {...pageProps} />
       </main>
     </>
