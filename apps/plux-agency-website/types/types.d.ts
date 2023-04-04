@@ -20,3 +20,9 @@ export interface IBioItem {
   label: string;
   items: string[];
 }
+
+export interface IPitch {
+  title: string;
+  titleSpacing: string;
+  description: string;
+}

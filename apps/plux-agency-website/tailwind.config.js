@@ -37,6 +37,7 @@ module.exports = {
       },
       fontSize: {
         8: '2rem', // 32px
+        10: '2.5rem', // 40px
         50: '12.5rem', // 200px
       },
       fontWeight: {
@@ -45,6 +46,8 @@ module.exports = {
       spacing: {
         18: '4.5rem', // 72px
         18.5: '4.625rem', // 74px
+        22: '5.5rem', // 88px
+        30: '7.5rem', // 120px
       },
     },
     fontFamily: {
