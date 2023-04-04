@@ -1,23 +1,23 @@
-export function Index() {
+import Head from 'next/head';
+
+import AboutSection from '../components/AboutSection';
+import FoundersSection from '../components/FoundersSection';
+import PartnerSection from '../components/PartnerSection';
+import JoinUsSection from '../components/JoinUsSection';
+import Footer from '../components/Footer';
+
+export default function Index() {
   return (
     <>
-      <section>
-        <h2 className="font-bariol text-turquoise">About us</h2>
-      </section>
-      <section>
-        <h2 className="font-gt-ultra-fine text-pink">Founders</h2>
-      </section>
-      <section>
-        <h2 className="font-gt-ultra-fine font-bold text-yellow">
-          Be a partner
-        </h2>
-      </section>
-      <section>
-        <h2>Join us</h2>
-      </section>
-      <footer>Footer</footer>
+      <Head>
+        <title>Plux Agency | About us</title>
+      </Head>
+
+      <AboutSection />
+      <FoundersSection />
+      <PartnerSection />
+      <JoinUsSection />
+      <Footer />
     </>
   );
 }
-
-export default Index;
