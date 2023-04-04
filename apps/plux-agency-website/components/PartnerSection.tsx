@@ -1,6 +1,9 @@
 import type { FC } from 'react';
 
+import Link from 'next/link';
+
 import type { IPitch } from '../types/types';
+
 import PitchItem from './ui/PitchItem';
 
 const PITCH: IPitch[] = [
@@ -49,6 +52,15 @@ const PartnerSection: FC = () => {
           </li>
         ))}
       </ul>
+
+      <div className="text-center">
+        <Link
+          href="https://pluxagency.com/join-forces"
+          className="inline-block bg-pink text-black text-2xl font-gt-ultra-fine font-bold tracking-wider uppercase px-8 py-3"
+        >
+          let’s join forces
+        </Link>
+      </div>
     </section>
   );
 };
