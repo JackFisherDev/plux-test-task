@@ -18,6 +18,10 @@ const gtUltra = localFont({
       weight: '250',
     },
     {
+      path: '../public/fonts/GT-Ultra/GT-Ultra-Fine-Regular.woff2',
+      weight: '400',
+    },
+    {
       path: '../public/fonts/GT-Ultra/GT-Ultra-Fine-Bold.woff2',
       weight: '700',
     },
