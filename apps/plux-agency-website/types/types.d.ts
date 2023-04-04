@@ -7,3 +7,16 @@ export interface ILocationItem {
 export interface IWithClassName {
   className?: string;
 }
+
+export interface IFounder {
+  name: string;
+  jobTitle: string;
+  cardPosition: string;
+  image: string;
+  bio: IBioItem[];
+}
+
+export interface IBioItem {
+  label: string;
+  items: string[];
+}
