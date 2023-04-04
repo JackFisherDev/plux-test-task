@@ -78,7 +78,7 @@ const bottomRowLocations: ILocationItem[] = [
 const AboutSection: FC = () => {
   return (
     <section className="relative py-[200px] px-16">
-      <Light className="absolute top-[227px] right-0 -z-10" />
+      <Light className="absolute top-[227px] right-0 -z-10 pointer-events-none" />
       <div>
         <h2 className="text-50 font-gt-ultra-fine leading-none font-medium-light tracking-tight mb-3">
           About <span className="text-turquoise">us</span>

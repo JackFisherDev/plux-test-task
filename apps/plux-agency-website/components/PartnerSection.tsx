@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { IPitch } from '../types/types';
 
 import PitchItem from './ui/PitchItem';
+import Light from './ui/Light';
 
 const PITCH: IPitch[] = [
   {
@@ -35,7 +36,11 @@ const PITCH: IPitch[] = [
 
 const PartnerSection: FC = () => {
   return (
-    <section className="pt-[319px] pb-[273px]">
+    <section className="relative pt-[319px] pb-[273px]">
+      <Light
+        className="absolute bottom-[477px] left-0 -z-10 pointer-events-none origin-center rotate-180"
+        color="pink"
+      />
       <h2 className="text-50 font-gt-ultra-fine font-medium-light text-right leading-none tracking-tight mb-2">
         What is it like
         <br /> to{' '}

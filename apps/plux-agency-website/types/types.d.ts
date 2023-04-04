@@ -25,4 +25,5 @@ export interface IPitch {
   title: string;
   titleSpacing: string;
   description: string;
+  pitchPosition: string;
 }
