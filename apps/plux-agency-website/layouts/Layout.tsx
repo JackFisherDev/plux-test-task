@@ -9,7 +9,7 @@ interface ILayout {
 const Layout: FC<ILayout> = ({ children }) => {
   return (
     <ReactLenis root options={{}}>
-      {children}
+      <main>{children}</main>
     </ReactLenis>
   );
 };

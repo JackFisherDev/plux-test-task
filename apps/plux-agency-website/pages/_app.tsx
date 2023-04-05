@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import localFont from 'next/font/local';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import '../styles/global.css';
 
@@ -38,9 +39,9 @@ function App({ Component, pageProps }: AppProps) {
         }
       `}</style>
 
-      <main>
+      <ParallaxProvider>
         <Component {...pageProps} />
-      </main>
+      </ParallaxProvider>
     </>
   );
 }
