@@ -52,7 +52,7 @@ module.exports = {
       keyframes: {
         blink: {
           '0%, 100%': { opacity: 1 },
-          '30%, 70%': { opacity: 0.2 },
+          '30%, 70%': { opacity: 0 },
         },
       },
       spacing: {

@@ -14,7 +14,7 @@ const COLORS: { turqois: string; pink: string } = {
 const Light: FC<ILightProps> = ({ color = 'turqois', className = '' }) => {
   return (
     <div
-      className={`w-[872px] h-[977px] pointer-events-none ${
+      className={`animate-pulse w-[872px] h-[977px] pointer-events-none ${
         COLORS[color] || ''
       } ${className}`}
       aria-hidden="true"
