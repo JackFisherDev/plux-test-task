@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import { useState, useEffect } from 'react';
+
 import type { ILocationItem } from '../../types/types';
 
 import Time from './Time';
@@ -10,11 +12,43 @@ interface IClockProps extends ILocationItem {
 
 export const Clock: FC<IClockProps> = ({
   location = '',
-  time = '',
+  timeZone = '',
   alignment = 'top',
   hasTail = false,
 }) => {
+  const [currentTime, setCurrentTime] = useState(new Date());
+  const [hours, setHours] = useState('');
+  const [minutes, setMinutes] = useState('');
   const isTitleOnTop = alignment === 'top';
+
+  // Update the current time every second
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Calculate the local time for each city using the Intl API
+  useEffect(() => {
+    const formatter = new Intl.DateTimeFormat([], {
+      timeZone,
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+    const localTime = formatter.formatToParts(currentTime);
+
+    for (const part of localTime) {
+      switch (part.type) {
+        case 'hour':
+          setHours(part.value);
+          break;
+        case 'minute':
+          setMinutes(part.value);
+          break;
+      }
+    }
+  }, [currentTime]);
 
   return (
     <div className={`flex ${isTitleOnTop ? 'flex-col' : 'flex-col-reverse'}`}>
@@ -25,7 +59,12 @@ export const Clock: FC<IClockProps> = ({
       >
         {location}
       </h3>
-      <Time time={time} withTail={hasTail} position={alignment} />
+      <Time
+        hours={hours}
+        minutes={minutes}
+        withTail={hasTail}
+        position={alignment}
+      />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 export interface ILocationItem {
   location: string;
-  time: string;
+  timeZone: string;
   alignment: 'top' | 'bottom';
 }
 

@@ -3,76 +3,78 @@ import type { FC } from 'react';
 import type { ILocationItem } from '../types/types';
 
 import { styles } from '../styles/styles';
+import { TIME_PLACEHOLDER } from '../common/consts';
 
-import ClockRow, { Clock } from './ui/Clock';
+import ClockRow from './ui/Clock';
+import Time from './ui/Time';
 import Light from './ui/Light';
 
 const topRowLocations: ILocationItem[] = [
   {
     location: 'Los Angeles',
-    time: '8:16',
+    timeZone: 'America/Los_Angeles',
     alignment: 'top',
   },
   {
     location: 'New York',
-    time: '11:16',
+    timeZone: 'America/New_York',
     alignment: 'top',
   },
   {
     location: 'Curitiba',
-    time: '13:16',
+    timeZone: 'America/Sao_Paulo',
     alignment: 'top',
   },
   {
     location: 'Lisbon',
-    time: '16:16',
+    timeZone: 'Europe/Lisbon',
     alignment: 'top',
   },
   {
     location: 'Lecce',
-    time: '17:16',
+    timeZone: 'Europe/Rome',
     alignment: 'top',
   },
   {
     location: 'Lagos',
-    time: '17:16',
+    timeZone: 'Africa/Lagos',
     alignment: 'top',
   },
   {
     location: 'Bali',
-    time: '00:16',
+    timeZone: 'Asia/Jakarta',
     alignment: 'top',
   },
 ];
 const bottomRowLocations: ILocationItem[] = [
   {
     location: 'San Fransisco',
-    time: '8:16',
+    timeZone: 'America/Los_Angeles',
     alignment: 'bottom',
   },
   {
     location: 'Toronto',
-    time: '11:16',
+    timeZone: 'America/Toronto',
     alignment: 'bottom',
   },
   {
     location: 'London',
-    time: '16:16',
+    timeZone: 'Europe/London',
     alignment: 'bottom',
   },
   {
     location: 'Barcelona',
-    time: '17:16',
+    timeZone: 'Europe/Madrid',
     alignment: 'bottom',
   },
   {
     location: 'Bratislava',
-    time: '17:16',
+    timeZone: 'Europe/Bratislava',
     alignment: 'bottom',
   },
   {
     location: 'Singapore',
-    time: '00:16',
+    timeZone: 'Asia/Singapore',
     alignment: 'bottom',
   },
 ];
@@ -96,8 +98,12 @@ const AboutSection: FC = () => {
           </div>
           <div className="flex justify-start items-start gap-8 translate-x-18">
             <ClockRow locations={bottomRowLocations} />
-            <div className="w-[120px]">
-              <Clock location="You?" time={'--:--'} alignment="bottom" />
+            <div className="w-[120px] flex flex-col">
+              {/* <Clock location="You?" timeZone={''} alignment="bottom" /> */}
+              <Time withTail={false} position={'bottom'} />
+              <h3 className="text-base leading-normal text-center mt-2">
+                You?
+              </h3>
               <h3 className="text-yellow text-center text-2xl leading-none font-gt-ultra-fine font-normal mt-2 -ml-4 whitespace-nowrap">
                 Join our team
               </h3>

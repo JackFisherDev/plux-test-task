@@ -7,6 +7,8 @@ import MarcosPhoto from '../public/images/marcos-photo.png';
 
 export const JOIN_FORCES_URL = 'https://pluxagency.com/join-forces';
 
+export const TIME_PLACEHOLDER = '--:--';
+
 export const FOUNDERS: IFounder[] = [
   {
     name: 'André Carmo',

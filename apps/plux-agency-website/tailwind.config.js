@@ -13,6 +13,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        blink: 'blink 1.5s linear infinite',
+      },
       backgroundImage: {
         'turquois-light':
           'radial-gradient(64% 51% at 99% 50%, rgba(7, 184, 186, 0.3) 0%, rgba(7, 184, 186, 0) 100%)',
@@ -45,6 +48,12 @@ module.exports = {
       },
       fontWeight: {
         'medium-light': 250,
+      },
+      keyframes: {
+        blink: {
+          '0%, 100%': { opacity: 1 },
+          '30%, 70%': { opacity: 0.2 },
+        },
       },
       spacing: {
         10.5: '2.625rem', // 42px
