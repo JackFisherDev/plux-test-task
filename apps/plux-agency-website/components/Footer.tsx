@@ -40,7 +40,7 @@ const Footer: FC = () => {
         loading="lazy"
         className="absolute -z-10 left-0 right-0 bottom-0 object-cover object-center pointer-events-none"
       />
-      <div className="flex justify-between items-start bg-white/5 border border-white/14 max-w-[1457px] mx-auto px-16 py-12">
+      <div className="flex justify-between items-start bg-white/5 border border-white/14 shadow-footer backdrop-blur-[23px] max-w-[1457px] mx-auto px-16 py-12">
         <div>
           <Image
             src={PluxLogo}
