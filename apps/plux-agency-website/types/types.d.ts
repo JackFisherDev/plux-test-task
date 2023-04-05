@@ -28,7 +28,7 @@ export interface IPitch {
   pitchPosition: string;
 }
 
-export interface IJobOpportunity {
+export interface ILink {
   title: string;
   url: string;
 }

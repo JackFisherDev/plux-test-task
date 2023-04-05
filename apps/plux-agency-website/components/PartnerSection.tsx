@@ -2,39 +2,11 @@ import type { FC } from 'react';
 
 import Link from 'next/link';
 
-import type { IPitch } from '../types/types';
-
 import { styles } from '../styles/styles';
+import { JOIN_FORCES_URL, PITCH } from '../common/consts';
 
 import PitchItem from './ui/PitchItem';
 import Light from './ui/Light';
-
-const PITCH: IPitch[] = [
-  {
-    title: 'We get you',
-    titleSpacing: 'ml-10 mr-8',
-    description: `We’ve been in your shoes. We are a group of builders and operators that has found and led companies in different sectors, from privacy tech to machine learning, and marketing. We’ve had successes and faced struggles, putting us in a unique position to understand and support your needs.`,
-    pitchPosition: 'translate-x-[10%]',
-  },
-  {
-    title: 'We have our <br />TPD Process',
-    titleSpacing: 'ml-10 mr-8',
-    description: `Our founding team has worked together for years in fast-moving startups. We know every product is different, and every project has a different timeline. With our process, we stay focused on delivering value at speed while remaining flexible and creative.`,
-    pitchPosition: 'justify-end',
-  },
-  {
-    title: 'We streamline',
-    titleSpacing: 'ml-10 mr-8',
-    description: `We love and use tools like Notion and Loom a lot. We are focused on delivering value and not on charging you for unnecessary and expensive meetings or beautiful, but useless, Decks.`,
-    pitchPosition: '',
-  },
-  {
-    title: 'We hire well',
-    titleSpacing: 'mx-8',
-    description: `The team we are continuously building is our secret sauce. We value craftsmanship over quantity and scale our team carefully to keep high quality standards.`,
-    pitchPosition: 'justify-end',
-  },
-];
 
 const PartnerSection: FC = () => {
   return (
@@ -62,8 +34,8 @@ const PartnerSection: FC = () => {
 
       <div className="text-center">
         <Link
-          href="https://pluxagency.com/join-forces"
-          className={`${styles.cta} ${styles.ctaLarge} inline-block bg-pink`}
+          href={JOIN_FORCES_URL}
+          className={`${styles.cta} ${styles.ctaLarge} inline-block bg-pink text-black`}
         >
           let’s join forces
         </Link>

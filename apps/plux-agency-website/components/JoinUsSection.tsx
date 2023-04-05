@@ -1,20 +1,13 @@
 import type { FC } from 'react';
 
-import type { IJobOpportunity } from '../types/types';
-
+import { OPPORTUNITIES } from '../common/consts';
 import { styles } from '../styles/styles';
 
 import JobOpportunity from './ui/JobOpportunity';
 
-const OPPORTUNITIES: IJobOpportunity[] = [
-  { title: 'Product Designer (Remote)', url: '/product-designer' },
-  { title: 'UI Engineer (Remote)', url: '/ui-engineer' },
-  { title: 'Product Manager (Remote)', url: '/product-manager' },
-];
-
 const JoinUsSection: FC = () => {
   return (
-    <section className="px-16">
+    <section className="px-16 mb-12">
       <h2 className={`${styles.sectionHeadText} mb-12`}>
         Join our <span className="font-normal text-yellow">team</span>
       </h2>
