@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import Layout from '../layouts/Layout';
+
 import AboutSection from '../components/AboutSection';
 import FoundersSection from '../components/FoundersSection';
 import PartnerSection from '../components/PartnerSection';
@@ -13,11 +15,13 @@ export default function Index() {
         <title>Plux Agency | About us</title>
       </Head>
 
-      <AboutSection />
-      <FoundersSection />
-      <PartnerSection />
-      <JoinUsSection />
-      <Footer />
+      <Layout>
+        <AboutSection />
+        <FoundersSection />
+        <PartnerSection />
+        <JoinUsSection />
+        <Footer />
+      </Layout>
     </>
   );
 }
