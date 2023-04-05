@@ -2,6 +2,8 @@ import type { FC } from 'react';
 
 import Link from 'next/link';
 
+import { styles } from '../../styles/styles';
+
 import type { IJobOpportunity } from '../../types/types';
 
 const JobOpportunity: FC<IJobOpportunity> = ({ title, url }) => {
@@ -9,7 +11,7 @@ const JobOpportunity: FC<IJobOpportunity> = ({ title, url }) => {
     <div className="flex justify-start items-center gap-4">
       <Link
         href={url}
-        className="inline-block bg-yellow text-black text-base font-gt-ultra-fine font-bold leading-loose tracking-wider uppercase px-6 py-1"
+        className={`${styles.cta} ${styles.ctaSmall} inline-block bg-yellow`}
       >
         view job
       </Link>

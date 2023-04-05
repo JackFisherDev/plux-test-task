@@ -2,6 +2,8 @@ import type { FC } from 'react';
 
 import type { IPitch } from '../../types/types';
 
+import { styles } from '../../styles/styles';
+
 interface IPitchItemProps extends IPitch {
   number: number;
 }
@@ -22,7 +24,9 @@ const PitchItem: FC<IPitchItemProps> = ({
         className={`${titleSpacing} text-pink font-gt-ultra-fine font-normal text-10 leading-snug tracking-tight`}
         dangerouslySetInnerHTML={{ __html: title }}
       />
-      <p className="text-2xl px-10 py-8 border border-pink max-w-[800px]">
+      <p
+        className={`${styles.sectionSubText} px-10 py-8 border border-pink max-w-[800px]`}
+      >
         {description}
       </p>
     </div>

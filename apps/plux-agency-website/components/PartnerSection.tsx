@@ -4,6 +4,8 @@ import Link from 'next/link';
 
 import type { IPitch } from '../types/types';
 
+import { styles } from '../styles/styles';
+
 import PitchItem from './ui/PitchItem';
 import Light from './ui/Light';
 
@@ -41,7 +43,7 @@ const PartnerSection: FC = () => {
         className="absolute bottom-[477px] left-0 -z-10 pointer-events-none origin-center rotate-180"
         color="pink"
       />
-      <h2 className="text-50 font-gt-ultra-fine font-medium-light text-right leading-none tracking-tight mb-2">
+      <h2 className={`${styles.sectionHeadText} text-right mb-2`}>
         What is it like
         <br /> to{' '}
         <span className="text-pink font-gt-ultra-fine font-bold">
@@ -61,7 +63,7 @@ const PartnerSection: FC = () => {
       <div className="text-center">
         <Link
           href="https://pluxagency.com/join-forces"
-          className="inline-block bg-pink text-black text-2xl font-gt-ultra-fine font-bold tracking-wider uppercase px-8 py-3"
+          className={`${styles.cta} ${styles.ctaLarge} inline-block bg-pink`}
         >
           let’s join forces
         </Link>

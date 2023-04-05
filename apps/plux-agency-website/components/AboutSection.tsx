@@ -2,6 +2,8 @@ import type { FC } from 'react';
 
 import type { ILocationItem } from '../types/types';
 
+import { styles } from '../styles/styles';
+
 import ClockRow, { Clock } from './ui/Clock';
 import Light from './ui/Light';
 
@@ -80,10 +82,10 @@ const AboutSection: FC = () => {
     <section className="relative py-[200px] px-16">
       <Light className="absolute top-[227px] right-0 -z-10 pointer-events-none" />
       <div>
-        <h2 className="text-50 font-gt-ultra-fine leading-none font-medium-light tracking-tight mb-3">
+        <h2 className={`${styles.sectionHeadText} mb-3`}>
           About <span className="text-turquoise">us</span>
         </h2>
-        <p className="text-white text-2xl mb-4 max-w-[676px]">
+        <p className={`${styles.sectionSubText} mb-4 max-w-[676px]`}>
           We are a value focused agency, leveraging our globally distributed
           team and its diverse set of experiences to deliver products and
           creative digital experiences at speed.
