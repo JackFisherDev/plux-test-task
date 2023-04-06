@@ -22,6 +22,9 @@ module.exports = {
         'pink-light':
           'radial-gradient(64% 51% at 99% 50%, rgba(255, 101, 190, 0.3) 0%, rgba(255, 101, 190, 0) 100%)',
       },
+      backgroundSize: {
+        '400%': '400%',
+      },
       boxShadow: {
         footer: '0px 4px 28px rgba(0, 0, 0, 0.25)',
         photo: '0px 20px 60px rgba(255, 218, 0, 0.33)',

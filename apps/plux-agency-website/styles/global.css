@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .who-started-plux {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 218, 0, 0.2) 0%,
+      rgba(255, 218, 0, 0.2) 45%,
+      rgba(255, 218, 0, 0.5) 50%,
+      rgba(255, 218, 0, 0.2) 55%,
+      rgba(255, 218, 0, 0.2) 100%
+    );
+    background-size: 400%;
+    animation: gradient 8s linear reverse infinite;
+    -webkit-text-stroke: 4px transparent;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: left -200% top -200%;
+    }
+    100% {
+      background-position: left 200% top 200%;
+    }
+  }
+}
