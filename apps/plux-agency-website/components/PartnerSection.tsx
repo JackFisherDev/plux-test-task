@@ -10,7 +10,7 @@ import Light from './ui/Light';
 
 const PartnerSection: FC = () => {
   return (
-    <section className="relative pt-[319px] pb-[273px] px-2">
+    <section className="relative pt-[819px] pb-[273px] px-2">
       <div className="w-full max-w-[1474px] mx-auto">
         <Light
           className="absolute bottom-[477px] left-0 -z-10 pointer-events-none origin-center rotate-180"
