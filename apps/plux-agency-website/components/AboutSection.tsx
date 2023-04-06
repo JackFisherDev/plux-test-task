@@ -3,7 +3,6 @@ import type { FC } from 'react';
 import type { ILocationItem } from '../types/types';
 
 import { styles } from '../styles/styles';
-import { TIME_PLACEHOLDER } from '../common/consts';
 
 import ClockRow from './ui/Clock';
 import Time from './ui/Time';
@@ -84,10 +83,10 @@ const AboutSection: FC = () => {
     <section className="relative py-[200px] px-16">
       <Light className="absolute top-[227px] right-0 -z-10 pointer-events-none" />
       <div>
-        <h2 className={`${styles.sectionHeadText} mb-3`}>
-          About <span className="text-turquoise">us</span>
+        <h2 className={`${styles.sectionHeadText} mb-2.5`}>
+          About <span className="text-turquoise font-normal">us</span>
         </h2>
-        <p className={`${styles.sectionSubText} mb-4 max-w-[676px]`}>
+        <p className={`${styles.sectionSubText} mb-8.5 max-w-[676px]`}>
           We are a value focused agency, leveraging our globally distributed
           team and its diverse set of experiences to deliver products and
           creative digital experiences at speed.
@@ -104,7 +103,7 @@ const AboutSection: FC = () => {
               <h3 className="text-base leading-normal text-center mt-2">
                 You?
               </h3>
-              <h3 className="text-yellow text-center text-2xl leading-none font-gt-ultra-fine font-normal mt-2 -ml-4 whitespace-nowrap">
+              <h3 className="text-yellow text-center text-2xl leading-none font-gt-ultra-fine font-normal tracking-tightest mt-2 -ml-2 whitespace-nowrap">
                 Join our team
               </h3>
             </div>

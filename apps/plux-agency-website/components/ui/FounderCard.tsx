@@ -22,9 +22,8 @@ const FounderCard: FC<IFounder> = ({
   const closeCard = () => setIsOpen(false);
 
   const cardStateStyle = {
-    general: `bg-white/8 backdrop-blur-[6px]`,
-    closed: `max-w-[256px] relative border border-white/15 ${cardPosition}`,
-    open: `flex justify-center items-center fixed top-0 left-0 right-0 bottom-0 z-20`,
+    closed: `max-w-[256px] relative border border-white/15 bg-white/8 ${cardPosition}`,
+    open: `flex justify-center items-center bg-black/48 fixed top-0 left-0 right-0 bottom-0 z-20`,
   };
 
   useEffect(() => {
@@ -40,9 +39,9 @@ const FounderCard: FC<IFounder> = ({
   return (
     <>
       <div
-        className={`${!isOpen ? cardStateStyle.closed : cardStateStyle.open} ${
-          cardStateStyle.general
-        }`}
+        className={`${
+          !isOpen ? cardStateStyle.closed : cardStateStyle.open
+        } backdrop-blur-[6px]`}
       >
         <div className={`${!isOpen ? '' : 'w-full max-w-[1372px]'} relative`}>
           <button
@@ -76,23 +75,25 @@ const FounderCard: FC<IFounder> = ({
               <Image
                 src={image}
                 alt={`${name} ${jobTitle}`}
-                width={!isOpen ? 224 : 480}
-                height={!isOpen ? 224 : 480}
+                width={480}
+                height={480}
                 loading="lazy"
-                className={`block ${
+                className={`block w-full ${
                   !isOpen
                     ? 'drop-shadow-small-photo'
                     : 'drop-shadow-large-photo w-full'
                 }`}
               />
             </div>
-            <div className={`${!isOpen ? '' : 'flex-1'} relative`}>
+            <div
+              className={`${!isOpen ? '' : 'flex-1 translate-y-4'} relative`}
+            >
               <h3
                 className={`${
                   !isOpen
-                    ? 'text-center text-2xl font-bold mb-2'
-                    : 'text-[56px] font-normal mb-4 flex justify-start items-end gap-3'
-                } text-white font-gt-ultra-fine leading-none tracking-tight`}
+                    ? 'text-center text-2xl font-bold tracking-tightest mb-2'
+                    : 'text-[56px] tracking-tight font-normal mb-4 flex justify-start items-end gap-3'
+                } text-white font-gt-ultra-fine leading-none `}
               >
                 {name}
                 <Image
@@ -119,7 +120,7 @@ const FounderCard: FC<IFounder> = ({
                 {bio.map(({ label, items }) => (
                   <div key={`${name}-${label}`} className="mb-4">
                     <h4 className="text-base leading-none mb-1">{label}</h4>
-                    <ul className="list-disc">
+                    <ul className="list-disc ml-2.5">
                       {items.map((item, index) => (
                         <li
                           key={`${index}-${item}`}

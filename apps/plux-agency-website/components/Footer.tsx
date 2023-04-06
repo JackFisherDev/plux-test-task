@@ -21,7 +21,7 @@ export const LinkList: FC<ILinkListProps> = ({ links }) => (
       <li key={url} className="text-right mb-2">
         <Link
           href={url}
-          className="font-gt-ultra-fine font-normal text-xl tracking-tight"
+          className="font-gt-ultra-fine font-normal text-xl tracking-tighter"
         >
           {title}
         </Link>
@@ -32,7 +32,7 @@ export const LinkList: FC<ILinkListProps> = ({ links }) => (
 
 const Footer: FC = () => {
   return (
-    <footer className="relative p-27.5">
+    <footer className="relative py-27.5 px-2">
       <Image
         src={FooterBgImage}
         alt="Footer background image"
@@ -50,7 +50,7 @@ const Footer: FC = () => {
           />
           <Link
             href={JOIN_FORCES_URL}
-            className={`${styles.cta} ${styles.ctaSmall} inline-block border border-yellow text-white mt-10.5 mb-12`}
+            className={`${styles.cta} ${styles.ctaSmall} inline-block border border-yellow text-white mt-10.5 mb-11`}
           >
             let’s join forces
           </Link>
@@ -61,7 +61,7 @@ const Footer: FC = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-end gap-22">
+        <div className="flex justify-end gap-23">
           <LinkList links={FOOTER_LINKS} />
           <LinkList links={SOCIAL_LINKS} />
         </div>

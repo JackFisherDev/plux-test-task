@@ -29,7 +29,7 @@ const Time: FC<ITimeProps> = ({
     <time
       className={`${
         !isWorking ? 'bg-yellow' : 'bg-turquoise'
-      } text-black font-gt-ultra-fine font-bold text-8 leading-none tracking-wider text-center py-4 w-[120px] relative z-1`}
+      } text-black font-gt-ultra-fine font-bold text-8 leading-none tracking-widest text-center py-4 w-[120px] relative z-1`}
     >
       {withTail && (
         <span

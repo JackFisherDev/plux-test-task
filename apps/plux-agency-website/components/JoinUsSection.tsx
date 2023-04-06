@@ -7,7 +7,7 @@ import JobOpportunity from './ui/JobOpportunity';
 
 const JoinUsSection: FC = () => {
   return (
-    <section className="px-16 mb-12">
+    <section className="px-16 mb-11">
       <h2 className={`${styles.sectionHeadText} mb-12`}>
         Join our <span className="font-normal text-yellow">team</span>
       </h2>

@@ -28,6 +28,7 @@ module.exports = {
       },
       colors: {
         black: '#000',
+        'black/48': 'rgba(0, 0, 0, 0.48)',
         pink: '#FF65BE',
         turquoise: '#07B8BA',
         white: '#FFF',
@@ -49,19 +50,40 @@ module.exports = {
       fontWeight: {
         'medium-light': 250,
       },
+      gap: {
+        23: '5.75rem', // 92px
+      },
       keyframes: {
         blink: {
           '0%, 100%': { opacity: 1 },
           '30%, 70%': { opacity: 0 },
         },
       },
+      letterSpacing: {
+        tightest: '-0.03em',
+        tighter: '-0.02em',
+        tight: '-0.01em',
+        wide: '0.03em',
+        wider: '0.04em',
+        widest: '0.05em',
+      },
+      lineHeight: {
+        zero: 0,
+      },
       spacing: {
+        8.5: '2.125rem', // 34px
+        9.5: '2.375rem', // 38px
         10.5: '2.625rem', // 42px
+        13: '3.25rem', // 52px
+        15: '3.75rem', // 60px
         18: '4.5rem', // 72px
         18.5: '4.625rem', // 74px
+        21: '5.25rem', // 84px
         22: '5.5rem', // 88px
         27.5: '6.875rem', // 110px
+        29.5: '7.375rem', // 118px
         30: '7.5rem', // 120px
+        50: '12.5rem', // 200px
       },
     },
     fontFamily: {

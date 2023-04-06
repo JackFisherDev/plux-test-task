@@ -15,7 +15,7 @@ const JobOpportunity: FC<ILink> = ({ title, url }) => {
       >
         view job
       </Link>
-      <h3 className="text-2xl leading-none tracking-tight">{title}</h3>
+      <h3 className="text-2xl leading-none tracking-tighter">{title}</h3>
     </div>
   );
 };

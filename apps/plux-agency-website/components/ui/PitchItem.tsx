@@ -17,11 +17,11 @@ const PitchItem: FC<IPitchItemProps> = ({
 }) => {
   return (
     <div className={`${pitchPosition} flex items-center`}>
-      <div className="font-gt-ultra-fine font-medium-light text-50 leading-none tracking-tight">
+      <div className="font-gt-ultra-fine font-medium-light text-50 leading-zero tracking-tightest">
         {number}
       </div>
       <h3
-        className={`${titleSpacing} text-pink font-gt-ultra-fine font-normal text-10 leading-snug tracking-tight`}
+        className={`${titleSpacing} text-pink font-gt-ultra-fine font-normal text-10 leading-snug tracking-tightest`}
         dangerouslySetInnerHTML={{ __html: title }}
       />
       <p

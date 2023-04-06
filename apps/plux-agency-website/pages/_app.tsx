@@ -15,8 +15,8 @@ const bariol = localFont({
 const gtUltra = localFont({
   src: [
     {
-      path: '../public/fonts/GT-Ultra/GT-Ultra-Fine-Light.woff2',
-      weight: '250',
+      path: '../public/fonts/GT-Ultra/GT-Ultra-Fine-Thin.woff2',
+      weight: '200',
     },
     {
       path: '../public/fonts/GT-Ultra/GT-Ultra-Fine-Regular.woff2',

@@ -13,7 +13,7 @@ export const FOUNDERS: IFounder[] = [
   {
     name: 'André Carmo',
     jobTitle: 'Co-Founder & CEO',
-    cardPosition: 'translate-x-1/2 mb-[103px]',
+    cardPosition: 'translate-x-[144px] mb-[87px]',
     image: AndrePhoto.src,
     bio: [
       {
@@ -39,7 +39,7 @@ export const FOUNDERS: IFounder[] = [
   {
     name: 'Steven Ligatsa',
     jobTitle: 'Co-Founder & CDO',
-    cardPosition: 'ml-auto mr-0 mb-8 -translate-x-[165%]',
+    cardPosition: 'ml-auto mr-0 mb-8 -translate-x-[425px]',
     image: StevenPhoto.src,
     bio: [
       {
@@ -65,7 +65,7 @@ export const FOUNDERS: IFounder[] = [
   {
     name: 'Sami McCabe',
     jobTitle: 'Co-Founder & CEO',
-    cardPosition: 'translate-x-[120%] mb-8',
+    cardPosition: 'translate-x-[312px] mb-8',
     image: SamiPhoto.src,
     bio: [
       {
@@ -119,9 +119,9 @@ export const FOUNDERS: IFounder[] = [
 export const PITCH: IPitch[] = [
   {
     title: 'We get you',
-    titleSpacing: 'ml-10 mr-8',
+    titleSpacing: 'ml-11 mr-9',
     description: `We’ve been in your shoes. We are a group of builders and operators that has found and led companies in different sectors, from privacy tech to machine learning, and marketing. We’ve had successes and faced struggles, putting us in a unique position to understand and support your needs.`,
-    pitchPosition: 'translate-x-[10%]',
+    pitchPosition: 'translate-x-[57px]',
   },
   {
     title: 'We have our <br />TPD Process',
@@ -151,7 +151,7 @@ export const OPPORTUNITIES: ILink[] = [
 
 export const FOOTER_LINKS: ILink[] = [
   { title: 'Home', url: '/' },
-  { title: 'Our work', url: '/portfolio' },
+  { title: 'Our Work', url: '/portfolio' },
 ];
 export const SOCIAL_LINKS: ILink[] = [
   { title: 'LinkedIn', url: 'https://www.linkedin.com/company/plux-agency/' },
