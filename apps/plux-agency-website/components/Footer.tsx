@@ -37,6 +37,7 @@ const Footer: FC = () => {
         src={FooterBgImage}
         alt="Footer background image"
         aria-hidden="true"
+        placeholder="blur"
         loading="lazy"
         className="absolute -z-10 left-0 right-0 bottom-0 object-cover object-center pointer-events-none"
       />

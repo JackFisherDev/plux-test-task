@@ -82,6 +82,7 @@ const FounderCard: FC<IFounder> = ({
                 width={480}
                 height={480}
                 loading="lazy"
+                placeholder="blur"
                 className={`block w-full ${
                   !isOpen
                     ? 'drop-shadow-small-photo'

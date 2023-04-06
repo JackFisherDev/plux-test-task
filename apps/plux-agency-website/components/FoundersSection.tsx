@@ -19,6 +19,7 @@ const FoundersSection: FC = () => {
               src={AboutUsImage}
               alt="About background"
               aria-hidden="true"
+              placeholder="blur"
               className="object-cover object-center"
             />
           </Parallax>
