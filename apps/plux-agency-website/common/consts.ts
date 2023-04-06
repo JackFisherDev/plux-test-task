@@ -13,7 +13,8 @@ export const FOUNDERS: IFounder[] = [
   {
     name: 'André Carmo',
     jobTitle: 'Co-Founder & CEO',
-    cardPosition: 'translate-x-[144px] mb-[87px]',
+    cardAlignment: '',
+    containerPosition: 'translate-x-[144px] mb-[87px]',
     image: AndrePhoto.src,
     bio: [
       {
@@ -39,7 +40,8 @@ export const FOUNDERS: IFounder[] = [
   {
     name: 'Steven Ligatsa',
     jobTitle: 'Co-Founder & CDO',
-    cardPosition: 'ml-auto mr-0 mb-8 -translate-x-[425px]',
+    cardAlignment: 'ml-auto mr-0',
+    containerPosition: 'mb-8 -translate-x-[425px]',
     image: StevenPhoto.src,
     bio: [
       {
@@ -65,7 +67,8 @@ export const FOUNDERS: IFounder[] = [
   {
     name: 'Sami McCabe',
     jobTitle: 'Co-Founder & CEO',
-    cardPosition: 'translate-x-[312px] mb-8',
+    cardAlignment: '',
+    containerPosition: 'translate-x-[312px] mb-8',
     image: SamiPhoto.src,
     bio: [
       {
@@ -91,7 +94,8 @@ export const FOUNDERS: IFounder[] = [
   {
     name: 'Marcos Silva',
     jobTitle: 'Co-Founder & CEO',
-    cardPosition: 'ml-auto mr-0 -translate-x-[85%]',
+    cardAlignment: 'ml-auto mr-0',
+    containerPosition: '-translate-x-[219px]',
     image: MarcosPhoto.src,
     bio: [
       {

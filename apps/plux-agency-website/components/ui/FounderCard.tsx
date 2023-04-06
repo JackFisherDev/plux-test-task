@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-// import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import type { IFounder } from '../../types/types';
 
@@ -12,7 +12,8 @@ import CrossIcon from '../../public/images/cross-icon.svg';
 const FounderCard: FC<IFounder> = ({
   name,
   jobTitle,
-  cardPosition,
+  cardAlignment,
+  containerPosition,
   image,
   bio,
 }) => {
@@ -22,7 +23,7 @@ const FounderCard: FC<IFounder> = ({
   const closeCard = () => setIsOpen(false);
 
   const cardStateStyle = {
-    closed: `max-w-[256px] relative border border-white/15 bg-white/8 ${cardPosition}`,
+    closed: `max-w-[256px] relative border border-white/15 bg-white/8`,
     open: `flex justify-center items-center bg-black/48 fixed top-0 left-0 right-0 bottom-0 z-20`,
   };
 
@@ -37,11 +38,12 @@ const FounderCard: FC<IFounder> = ({
   }, []);
 
   return (
-    <>
-      <div
+    <div className={`${!isOpen ? containerPosition : ''}`}>
+      <motion.div
+        layout
         className={`${
           !isOpen ? cardStateStyle.closed : cardStateStyle.open
-        } backdrop-blur-[6px]`}
+        } backdrop-blur-[6px] ${cardAlignment}`}
       >
         <div className={`${!isOpen ? '' : 'w-full max-w-[1372px]'} relative`}>
           <button
@@ -59,6 +61,7 @@ const FounderCard: FC<IFounder> = ({
               loading="lazy"
             />
           </button>
+
           <div
             className={`${
               !isOpen
@@ -67,7 +70,8 @@ const FounderCard: FC<IFounder> = ({
             }`}
             onClick={openCard}
           >
-            <div
+            <motion.div
+              layout
               className={`${
                 !isOpen ? 'mb-16' : 'flex-1 w-full max-w-[480px]'
               } relative shadow-photo`}
@@ -84,65 +88,89 @@ const FounderCard: FC<IFounder> = ({
                     : 'drop-shadow-large-photo w-full'
                 }`}
               />
-            </div>
+            </motion.div>
+
             <div
               className={`${!isOpen ? '' : 'flex-1 translate-y-4'} relative`}
             >
-              <h3
+              <motion.h3
+                layout
                 className={`${
                   !isOpen
                     ? 'text-center text-2xl font-bold tracking-tightest mb-2'
                     : 'text-[56px] tracking-tight font-normal mb-4 flex justify-start items-end gap-3'
-                } text-white font-gt-ultra-fine leading-none `}
+                } text-white font-gt-ultra-fine leading-none`}
               >
                 {name}
-                <Image
-                  src={PluxIcon}
-                  alt="Plux icon"
-                  width={!isOpen ? 80 : 43}
-                  height={!isOpen ? 80 : 43}
-                  loading="lazy"
+                <motion.div
+                  layout
                   className={`${
                     !isOpen
-                      ? 'absolute  z-10 -translate-x-10 left-1/2 -top-[104px]'
-                      : 'static'
-                  }  pointer-events-none`}
-                />
-              </h3>
-              <p
+                      ? 'absolute z-10 -ml-10 left-1/2 -top-[104px] w-20 h-20'
+                      : 'relative w-[43px] h-[43px]'
+                  } pointer-events-none`}
+                >
+                  <Image
+                    src={PluxIcon}
+                    alt="Plux icon"
+                    loading="lazy"
+                    fill
+                    className="w-full h-full"
+                  />
+                </motion.div>
+              </motion.h3>
+
+              <motion.p
+                layout
                 className={`${
-                  !isOpen ? 'text-base text-center' : 'text-2xl'
-                }  leading-none text-yellow`}
+                  !isOpen ? 'text-base text-center' : 'text-2xl mb-4'
+                } leading-none text-yellow`}
               >
                 {jobTitle}
-              </p>
-              <div className={`${!isOpen ? 'hidden' : ''} mt-4`}>
-                {bio.map(({ label, items }) => (
-                  <div key={`${name}-${label}`} className="mb-4">
-                    <h4 className="text-base leading-none mb-1">{label}</h4>
-                    <ul className="list-disc ml-2.5">
-                      {items.map((item, index) => (
-                        <li
-                          key={`${index}-${item}`}
-                          className="text-base leading-relaxed opacity-80"
-                        >
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
+              </motion.p>
+
+              <AnimatePresence>
+                {isOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, x: 120, y: 40 }}
+                    animate={{
+                      opacity: 1,
+                      x: 0,
+                      y: 0,
+                      transition: { delay: 0.15, ease: 'easeIn' },
+                    }}
+                    exit={{
+                      display: 'none',
+                    }}
+                  >
+                    {bio.map(({ label, items }) => (
+                      <div key={`${name}-${label}`} className="mb-4">
+                        <h4 className="text-base leading-none mb-1">{label}</h4>
+                        <ul className="list-disc ml-2.5">
+                          {items.map((item, index) => (
+                            <li
+                              key={`${index}-${item}`}
+                              className="text-base leading-relaxed opacity-80"
+                            >
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       {/*
         NOTE: Bottom div is a placeholder that appears when the card becomes
-              "position: fixed;". It is needed to prevent other card shifting.
+            "position: fixed;". It is needed to prevent other card shifting.
       */}
-      {isOpen && <div className={`w-[256px] h-[416px] ${cardPosition}`} />}
-    </>
+      {isOpen && <div className={`w-[256px] h-[416px] ${containerPosition}`} />}
+    </div>
   );
 };
 

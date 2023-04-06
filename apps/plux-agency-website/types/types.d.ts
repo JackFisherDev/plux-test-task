@@ -11,7 +11,8 @@ export interface IWithClassName {
 export interface IFounder {
   name: string;
   jobTitle: string;
-  cardPosition: string;
+  cardAlignment: string;
+  containerPosition: string;
   image: string;
   bio: IBioItem[];
 }
