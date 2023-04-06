@@ -13,7 +13,7 @@ export interface IFounder {
   jobTitle: string;
   cardAlignment: string;
   containerPosition: string;
-  image: string;
+  Photo: StaticImageData;
   bio: IBioItem[];
 }
 

@@ -14,7 +14,7 @@ const FounderCard: FC<IFounder> = ({
   jobTitle,
   cardAlignment,
   containerPosition,
-  image,
+  Photo,
   bio,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,7 +77,7 @@ const FounderCard: FC<IFounder> = ({
               } relative shadow-photo`}
             >
               <Image
-                src={image}
+                src={Photo}
                 alt={`${name} ${jobTitle}`}
                 width={480}
                 height={480}
