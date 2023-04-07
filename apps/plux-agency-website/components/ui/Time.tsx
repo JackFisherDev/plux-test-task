@@ -1,7 +1,5 @@
 import type { FC } from 'react';
 
-// import { TIME_PLACEHOLDER } from '../../common/consts';
-
 interface ITimeProps {
   time?: string;
   hours?: string;
@@ -13,7 +11,6 @@ interface ITimeProps {
 const TIME_PLACEHOLDER = '--';
 
 const Time: FC<ITimeProps> = ({
-  // time = TIME_PLACEHOLDER,
   hours = '--',
   minutes = '--',
   withTail = false,
