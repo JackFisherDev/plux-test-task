@@ -1,4 +1,4 @@
-import type { IFounder, IPitch, ILink } from '../types/types';
+import type { IFounder, IPitch, ILink, ILocationItem } from '../types/types';
 
 import AndrePhoto from '../public/images/andre-photo.png';
 import StevenPhoto from '../public/images/steven-photo.png';
@@ -161,4 +161,75 @@ export const SOCIAL_LINKS: ILink[] = [
   { title: 'LinkedIn', url: 'https://www.linkedin.com/company/plux-agency/' },
   { title: 'Dribbble', url: 'https://www.dribbble.com/company/plux-agency/' },
   { title: 'Behance', url: 'https://www.behance.com/company/plux-agency/' },
+];
+
+export const TOP_ROW_LOCATIONS: ILocationItem[] = [
+  {
+    location: 'Los Angeles',
+    timeZone: 'America/Los_Angeles',
+    alignment: 'top',
+  },
+  {
+    location: 'New York',
+    timeZone: 'America/New_York',
+    alignment: 'top',
+  },
+  {
+    location: 'Curitiba',
+    timeZone: 'America/Sao_Paulo',
+    alignment: 'top',
+  },
+  {
+    location: 'Lisbon',
+    timeZone: 'Europe/Lisbon',
+    alignment: 'top',
+  },
+  {
+    location: 'Lecce',
+    timeZone: 'Europe/Rome',
+    alignment: 'top',
+  },
+  {
+    location: 'Lagos',
+    timeZone: 'Africa/Lagos',
+    alignment: 'top',
+  },
+  {
+    location: 'Bali',
+    timeZone: 'Asia/Jakarta',
+    alignment: 'top',
+  },
+];
+
+export const BOTTOM_ROW_LOCATIONS: ILocationItem[] = [
+  {
+    location: 'San Fransisco',
+    timeZone: 'America/Los_Angeles',
+    alignment: 'bottom',
+  },
+  {
+    location: 'Toronto',
+    timeZone: 'America/Toronto',
+    alignment: 'bottom',
+  },
+  {
+    location: 'London',
+    timeZone: 'Europe/London',
+    alignment: 'bottom',
+  },
+  {
+    location: 'Barcelona',
+    timeZone: 'Europe/Madrid',
+    alignment: 'bottom',
+  },
+  {
+    location: 'Bratislava',
+    timeZone: 'Europe/Bratislava',
+    alignment: 'bottom',
+  },
+  {
+    location: 'Singapore',
+    timeZone: 'Asia/Singapore',
+    alignment: 'bottom',
+  },
 ];

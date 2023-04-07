@@ -1,14 +1,11 @@
 import type { FC } from 'react';
 
-// import Image from 'next/image';
 import { Parallax } from 'react-scroll-parallax';
 
 import { FOUNDERS } from '../common/consts';
 
 import FounderCard from './ui/FounderCard';
 import WhoStartedPlux from './ui/WhoStartedPlux';
-
-// import AboutUsImage from '../public/images/about-us-bg-image.png';
 
 const FoundersSection: FC = () => {
   return (
@@ -19,15 +16,6 @@ const FoundersSection: FC = () => {
             <WhoStartedPlux />
           </Parallax>
         </div>
-        {/* <div className="absolute -z-10 pointer-events-none"> */}
-        {/* <Image
-            src={AboutUsImage}
-            alt="About background"
-            aria-hidden="true"
-            placeholder="blur"
-            className="object-cover object-center"
-          /> */}
-        {/* </div> */}
 
         <ul className="pt-[158px]">
           {FOUNDERS.map((founder) => (

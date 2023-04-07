@@ -16,6 +16,7 @@ const PartnerSection: FC = () => {
           className="absolute bottom-[477px] left-0 -z-10 pointer-events-none origin-center rotate-180"
           color="pink"
         />
+
         <h2 className={`${styles.sectionHeadText} text-right mb-[129px]`}>
           What is it like
           <br /> to{' '}
@@ -25,6 +26,7 @@ const PartnerSection: FC = () => {
           <br />
           with us?
         </h2>
+
         <ul>
           {PITCH.map((pitch, index) => (
             <li key={pitch.title} className="my-29.5 last:mt-30 last:mb-21">
