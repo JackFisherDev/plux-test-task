@@ -3,24 +3,7 @@ import type { ElementType } from 'react';
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-export const fadeIn = (direction, type, delay, duration) => ({
-  hidden: {
-    x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
-    y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
-    opacity: 0,
-  },
-  show: {
-    x: 0,
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: type,
-      delay: delay,
-      duration: duration,
-      ease: 'easeOut',
-    },
-  },
-});
+import { fadeIn } from '../common/motion';
 
 export default function withFadeInAnimation(
   Component: ElementType,
