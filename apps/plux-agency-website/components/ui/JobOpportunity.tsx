@@ -19,4 +19,5 @@ const JobOpportunity: FC<ILink> = ({ title, url }) => {
     </div>
   );
 };
+
 export default JobOpportunity;

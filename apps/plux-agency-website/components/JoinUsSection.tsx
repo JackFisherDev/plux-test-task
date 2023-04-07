@@ -1,9 +1,13 @@
 import type { FC } from 'react';
 
+import { withFadeInAnimation } from '../hoc';
+
+import JobOpportunity from './ui/JobOpportunity';
+
 import { OPPORTUNITIES } from '../common/consts';
 import { styles } from '../styles/styles';
 
-import JobOpportunity from './ui/JobOpportunity';
+const AnimatedJobOpportunity = withFadeInAnimation(JobOpportunity);
 
 const JoinUsSection: FC = () => {
   return (
@@ -19,7 +23,7 @@ const JoinUsSection: FC = () => {
       <ul>
         {OPPORTUNITIES.map((opportunity) => (
           <li key={opportunity.title} className="my-6">
-            <JobOpportunity {...opportunity} />
+            <AnimatedJobOpportunity {...opportunity} />
           </li>
         ))}
       </ul>

@@ -9,6 +9,19 @@ import type { IFounder } from '../../types/types';
 import PluxIcon from '../../public/images/plux-icon.svg';
 import CrossIcon from '../../public/images/cross-icon.svg';
 
+const bioAnimation = {
+  initial: { opacity: 0, x: 120, y: 40 },
+  show: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: { delay: 0.15, ease: 'easeIn' },
+  },
+  hide: {
+    display: 'none',
+  },
+};
+
 const FounderCard: FC<IFounder> = ({
   name,
   jobTitle,
@@ -133,16 +146,9 @@ const FounderCard: FC<IFounder> = ({
               <AnimatePresence>
                 {isOpen && (
                   <motion.div
-                    initial={{ opacity: 0, x: 120, y: 40 }}
-                    animate={{
-                      opacity: 1,
-                      x: 0,
-                      y: 0,
-                      transition: { delay: 0.15, ease: 'easeIn' },
-                    }}
-                    exit={{
-                      display: 'none',
-                    }}
+                    initial={bioAnimation.initial}
+                    animate={bioAnimation.show}
+                    exit={bioAnimation.hide}
                   >
                     {bio.map(({ label, items }) => (
                       <div key={`${name}-${label}`} className="mb-4">
